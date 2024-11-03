@@ -5,99 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite</title>
     <style>
-    /* Style général */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #1a1a2e;
-        color: #eaeaea;
-        margin: 0;
-        padding: 0;
-    }
-    h1, h2 {
-        text-align: center;
-        margin: 10px;
-    }
-    a {
-        color: #00aaff;
-        text-decoration: none;
-    }
-    a:hover {
-        color: #ffaa00;
-    }
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 10px;
+        }
+        a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffaa00;
+        }
 
-    /* En-tête */
-    header {
-        background-color: #161625;
-        padding: 20px;
-        text-align: center;
-        color: #eaeaea;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+        /* En-tête */
+        header {
+            background-color: #161625;
+            padding: 20px;
+            text-align: center;
+            color: #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    /* Section de navigation */
-    nav {
-        margin: 20px 0;
-        text-align: center;
-    }
-    nav a {
-        margin: 0 15px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #00aaff;
-    }
+        /* Section de navigation */
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00aaff;
+        }
 
-    /* Style des sections */
-    section {
-        margin: 40px 0;
-        padding: 20px;
-        text-align: center;
-    }
+        /* Style des sections */
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
 
-    /* Effets d'images */
-    .character img, .map img, .mode img, .carousel img {
-        width: 50% /* Définit la largeur à environ 1/8 de la page */
-        height: auto;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .character img:hover, .map img:hover, .mode img:hover, .carousel img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    }
+        /* Effets d'images */
+        .character img, .map img, .mode img, .quest img, .carousel img {
+            width: 12.5%; /* Définit la largeur à environ 1/8 de la page */
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .character img:hover, .map img:hover, .mode img:hover, .quest img:hover, .carousel img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
 
-    /* Carrousel */
-    .carousel {
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-    }
-    .carousel img.active {
-        display: block;
-        opacity: 1;
-    }
-    .carousel-buttons {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
-    .carousel-buttons button {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #eaeaea;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 18px;
-    }
-</style>
+        /* Carrousel */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .carousel img.active {
+            display: block;
+            opacity: 1;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #eaeaea;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 
@@ -108,7 +108,7 @@
         <a href="#personnages">Personnages</a>
         <a href="#cartes">Cartes</a>
         <a href="#modes">Modes de Jeu</a>
-        <a href="#modes">Quête </a>
+        <a href="#quete">Quête</a> <!-- Correction du lien pour correspondre à l'ID -->
         <a href="#images">Images</a>
     </nav>
 </header>
@@ -130,13 +130,11 @@
     </div>
 </section>
 
-<section id="carti">
+<section id="cartes">
     <h2 class="section-title">Cartes</h2>
     <div class="map">
         <img src="https://github.com/user-attachments/assets/df45cbed-c61e-434c-a243-9425d23da486" alt="Carte de la saison" />
         <p>Légende de la carte : description et nouveautés.</p>
-
-        <p>Légende de la carte 1 : description et nouveautés.</p>
     </div>
     <div class="map">
         <img src="carte2.jpg" alt="Carte 2">
@@ -156,15 +154,15 @@
     </div>
 </section>
 
-<section id="quête">
-    <h2 class="section-title">Modes de Jeu</h2>
-    <div class="quête">
-        <img src="mode1.jpg" alt="Mode de Jeu 1">
-        <p>Description du mode de jeu 1 : caractéristiques et gameplay.</p>
+<section id="quete">
+    <h2 class="section-title">Quête</h2> <!-- Titre de section corrigé -->
+    <div class="quest">
+        <img src="quete1.jpg" alt="Quête 1">
+        <p>Description de la quête 1 : objectifs et récompenses.</p>
     </div>
-    <div class="mode">
-        <img src="mode2.jpg" alt="Mode de Jeu 2">
-        <p>Description du mode de jeu 2 : caractéristiques et gameplay.</p>
+    <div class="quest">
+        <img src="quete2.jpg" alt="Quête 2">
+        <p>Description de la quête 2 : objectifs et récompenses.</p>
     </div>
 </section>
 
