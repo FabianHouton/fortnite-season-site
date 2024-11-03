@@ -51,7 +51,7 @@
         /* Style des sections */
         section {
             margin: 40px 0;
-            padding: 20px;
+            padding: 60px 20px 20px; /* Padding en haut */
             text-align: center;
         }
 
@@ -116,7 +116,7 @@
 <section id="nouveautes">
     <h2 class="section-title">Nouveautés</h2>
     <p>Bienvenue dans le Chapitre 2 : Remix. L'île que vous connaissez bien est de retour, remixée et repensée. Retrouvez chaque semaine des lieux et des objets inspirés par les meilleurs moments du Chapitre 2, avec quelques-unes des plus grandes icônes de l'histoire de la musique. Dans ce retour aux sources, Snoop Dogg prend la tête de l'Agence, le dieu du rap Eminem ouvre son restaurant dans la Grotte et la princesse du hip-hop Ice Spice prend ses aises sur l'Île du requin. Le remix se terminera par un hommage grandiose rendu au légendaire Juice WRLD. Montez le son et ouvrez la remise dans Fortnite Battle Royale Chapitre 2 : Remix !</p>
-    <p>Lien de présentation : <a href="https://www.youtube.com/watch?v=H3QyrxnpDMo" target="_blank">Regardez ici</a></p>
+    lien de presentation : <a href="https://www.youtube.com/watch?v=H3QyrxnpDMo">Regarder ici</a>
 </section>
 
 <section id="personnages">
@@ -138,7 +138,7 @@
     <h2 class="section-title">Cartes</h2>
     <div class="map">
         <img src="https://github.com/user-attachments/assets/df45cbed-c61e-434c-a243-9425d23da486" alt="Carte de la saison" />
-        <p>Carte du battle royale de cette semaine</p>
+        <p> Carte du battle royale de cette semaine</p>
     </div>
 </section>
 
@@ -184,25 +184,42 @@
 </footer>
 
 <script>
-    let currentImageIndex = 0;
-    const images = document.querySelectorAll(".carousel img");
+    // Script pour le carrousel
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel img');
 
     function showImage(index) {
         images.forEach((img, i) => {
-            img.classList.remove("active");
-            if (i === index) img.classList.add("active");
+            img.classList.toggle('active', i === index);
         });
     }
 
     function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        showImage(currentImageIndex);
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
     }
 
     function prevImage() {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        showImage(currentImageIndex);
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
     }
+
+    // Ajustement du défilement pour les liens de navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const headerOffset = document.querySelector('header').offsetHeight; // Hauteur de l'en-tête
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
 </script>
 
 </body>
