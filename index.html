@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Saison Actuelle</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 10px;
+        }
+        a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffaa00;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #161625;
+            padding: 20px;
+            text-align: center;
+            color: #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Section de navigation */
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00aaff;
+        }
+
+        /* Style des sections */
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Effets d'images */
+        .character img, .map img, .mode img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .character img:hover, .map img:hover, .mode img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Carrousel */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel img.active {
+            display: block;
+            opacity: 1;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #eaeaea;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fortnite - Saison Actuelle</h1>
+    <nav>
+        <a href="#nouveautes">Nouveautés</a>
+        <a href="#personnages">Personnages</a>
+        <a href="#cartes">Cartes</a>
+        <a href="#modes">Modes de Jeu</a>
+        <a href="#images">Images</a>
+    </nav>
+</header>
+
+<section id="nouveautes">
+    <h2 class="section-title">Nouveautés</h2>
+    <p>Découvrez toutes les nouveautés de la saison actuelle de Fortnite : nouvelles armes, changements de gameplay, et bien plus encore.</p>
+</section>
+
+<section id="personnages">
+    <h2 class="section-title">Personnages</h2>
+    <div class="character">
+        <img src="chemin/vers/image_personnage1.jpg" alt="Personnage 1">
+        <p>Légende du personnage 1 : description, statistiques, etc.</p>
+    </div>
+    <div class="character">
+        <img src="chemin/vers/image_personnage2.jpg" alt="Personnage 2">
+        <p>Légende du personnage 2 : description, statistiques, etc.</p>
+    </div>
+</section>
+
+<section id="cartes">
+    <h2 class="section-title">Cartes</h2>
+    <div class="map">
+        <img src="chemin/vers/image_carte1.jpg" alt="Carte 1">
+        <p>Légende de la carte 1 : description et nouveautés.</p>
+    </div>
+    <div class="map">
+        <img src="chemin/vers/image_carte2.jpg" alt="Carte 2">
+        <p>Légende de la carte 2 : description et nouveautés.</p>
+    </div>
+</section>
+
+<section id="modes">
+    <h2 class="section-title">Modes de Jeu</h2>
+    <div class="mode">
+        <img src="chemin/vers/image_mode1.jpg" alt="Mode de Jeu 1">
+        <p>Description du mode de jeu 1 : caractéristiques et gameplay.</p>
+    </div>
+    <div class="mode">
+        <img src="chemin/vers/image_mode2.jpg" alt="Mode de Jeu 2">
+        <p>Description du mode de jeu 2 : caractéristiques et gameplay.</p>
+    </div>
+</section>
+
+<section id="images">
+    <h2 class="section-title">Galerie d'Images</h2>
+    <div class="carousel">
+        <img src="chemin/vers/image1.jpg" alt="Image 1" class="active">
+        <img src="chemin/vers/image2.jpg" alt="Image 2">
+        <img src="chemin/vers/image3.jpg" alt="Image 3">
+        <div class="carousel-buttons">
+            <button onclick="prevImage()">&#10094;</button>
+            <button onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Archive Fortnite - Saison Actuelle</p>
+</footer>
+
+<script>
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll(".carousel img");
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove("active");
+            if (i === index) img.classList.add("active");
+        });
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+    }
+</script>
+
+</body>
+</html>
