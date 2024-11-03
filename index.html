@@ -5,104 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite</title>
     <style>
-        /* Style général */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a2e;
-            color: #eaeaea;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2 {
-            text-align: center;
-            margin: 10px;
-        }
-        a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #ffaa00;
-        }
+    /* Style général */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a2e;
+        color: #eaeaea;
+        margin: 0;
+        padding: 0;
+    }
+    h1, h2 {
+        text-align: center;
+        margin: 10px;
+    }
+    a {
+        color: #00aaff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #ffaa00;
+    }
 
-        /* En-tête */
-        header {
-            background-color: #161625;
-            padding: 20px;
-            text-align: center;
-            color: #eaeaea;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    /* En-tête */
+    header {
+        background-color: #161625;
+        padding: 20px;
+        text-align: center;
+        color: #eaeaea;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-        /* Section de navigation */
-        nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #00aaff;
-        }
+    /* Section de navigation */
+    nav {
+        margin: 20px 0;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #00aaff;
+    }
 
-        /* Style des sections */
-        section {
-            margin: 40px 0;
-            padding: 20px;
-            text-align: center;
-        }
+    /* Style des sections */
+    section {
+        margin: 40px 0;
+        padding: 20px;
+        text-align: center;
+    }
 
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
 
-        /* Effets d'images */
-        .character img, .map img, .mode img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .character img:hover, .map img:hover, .mode img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
+    /* Effets d'images */
+    .character img, .map img, .mode img, .carousel img {
+        width: 12.5%; /* Définit la largeur à environ 1/8 de la page */
+        height: auto;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .character img:hover, .map img:hover, .mode img:hover, .carousel img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
 
-        /* Carrousel */
-        .carousel {
-            position: relative;
-            max-width: 100%;
-            overflow: hidden;
-        }
-        .carousel img {
-            width: 100%;
-            display: none;
-            transition: opacity 1s ease-in-out;
-        }
-        .carousel img.active {
-            display: block;
-            opacity: 1;
-        }
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .carousel-buttons button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #eaeaea;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-    </style>
+    /* Carrousel */
+    .carousel {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .carousel img.active {
+        display: block;
+        opacity: 1;
+    }
+    .carousel-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    .carousel-buttons button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #eaeaea;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+</style>
 </head>
 <body>
 
@@ -125,7 +120,7 @@
 <section id="personnages">
     <h2 class="section-title">Personnages</h2>
     <div class="character">
-        <img src="https://github.com/user-attachments/assets/86da042a-d436-4094-8c07-0cbd7bece1ba" alt="Personnage 1">
+        <img src="personnage1.jpg" alt="Personnage 1">
         <p>Légende du personnage 1 : description, statistiques, etc.</p>
     </div>
     <div class="character">
