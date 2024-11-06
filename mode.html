@@ -12,6 +12,7 @@
             color: #eaeaea;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth; /* Défilement fluide */
         }
         h1, h2 {
             text-align: center;
@@ -20,18 +21,18 @@
         }
         h3 {
             text-align: center;
-            font-size: 20px; /* Correction de 'front-size' en 'font-size' et ajustement */
+            font-size: 20px;
             margin: 10px;
-            color: #FF0000; /* Couleur rouge */
+            color: #FF0000;
         }
         h4 {
             text-align: center;
-            font-size: 20px; /* Correction de 'front-size' en 'font-size' et ajustement */
+            font-size: 20px;
             margin: 10px;
-            color: #ADD8E6; /* bleu  clair */
+            color: #ADD8E6;
         }
-        .p2 { /* Ajout de la classe .p2 */
-            color: #FF0000; /* Couleur rouge */
+        .p2 {
+            color: #FF0000;
         }
         a {
             color: #00aaff;
@@ -47,6 +48,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            padding: 10px 0;
         }
         /* Section de navigation */
         nav {
@@ -58,6 +60,9 @@
             color: #00aaff;
             margin: 0 15px;
         }
+        nav a:hover {
+            color: #ffaa00;
+        }
         /* Style des sections */
         section {
             margin: 40px 0;
@@ -67,13 +72,14 @@
         .section-title {
             font-size: 28px;
             margin-bottom: 20px;
-            /* Marge négative pour remonter le titre */
-            margin-top: -60px; /* Ajustez cette valeur selon vos préférences */
-            padding-top: 120px; /* Espace au-dessus du titre */
+            margin-top: -60px;
+            padding-top: 120px;
         }
         /* Effets d'images */
         .character img, .map img, .mode img, .quest img, .carousel img {
-            width: 50%;
+            width: 100%;
+            max-width: 600px; /* Ajout pour limiter la taille des images */
+            height: auto;
             transition: transform 0.3s;
         }
         .character img:hover, .map img:hover, .mode img:hover, .quest img:hover, .carousel img:hover {
@@ -83,6 +89,12 @@
         /* Carrousel */
         .carousel {
             position: relative;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .carousel img {
+            margin: 10px;
         }
     </style>
 </head>
@@ -91,179 +103,58 @@
         <h1>Fortnite Recharge - Mission mirage : nouvelle carte et mode solo</h1>
         <nav>
             <a href="#nouveautes">Nouveautés</a>
-            <a href="#deroulement">Déroulement de la saison</a>
-            <a href="#personnages">Personnages</a>
-            <a href="#cartes">Carte</a>
+            <a href="#solo">Mode solo </a>
+	    <a href="#changement">Changement infini </a>
+            <a href="#arme">Armes</a>
+            <a href="#cartes">Cartes</a>
             <a href="index.html">Mode</a>
-    </div>
             <a href="#quete">Quête</a>
             <a href="#images">Images</a>
         </nav>
     </header>
    <section id="nouveautes">
-    <h2 class="section-title">Nouveautés</h2>
-    <p>Bienvenue dans le Chapitre 2 : Remix. L'île que vous connaissez bien est de retour, remixée et repensée. Retrouvez chaque semaine des lieux et des objets inspirés par les meilleurs moments du Chapitre 2, avec quelques-unes des plus grandes icônes de l'histoire de la musique. Dans ce retour aux sources, Snoop Dogg prend la tête de l'Agence (Doggpound), le dieu du rap Eminem ouvre son restaurant dans la Grotte et la princesse du hip-hop Ice Spice prend ses aises sur l'Île du requin. Le remix se terminera par un hommage grandiose rendu au légendaire Juice WRLD. Montez le son et ouvrez la remise dans Fortnite Battle Royale 2 : Remix !</p>
-    
-    <p>Vidéo de présentation : <a href="https://www.youtube.com/watch?v=H3QyrxnpDMo">Regarder ici</a></p>
-    
-    <h4>Nouveaux vehicules</h4>
-    <p>Canots motorisés, Choppas et 1966 Cadillac Deville</p>
-    <p>Montez dès maintenant à bord des canots motorisés du Chapitre 2, puis préparez-vous à vous envoler grâce aux Choppas un peu plus tard dans la saison ! Tout au long de celle-ci, vous retrouverez également la célèbre 1966 Cadillac DeVille à différents endroits de la carte. Elle rebondit au son de la musique et peut même sauter en l'air !</p>
-    
-    <img src="https://github.com/user-attachments/assets/3fa1411e-2b17-44c7-8f9b-fcecb06d4cf6" alt="Image 3" />
-    
-    <p>Conduisez au plus près du bitume avec le pack Snoop Dogg | Cadillac, qui comprend le châssis 1966 Cadillac Deville, trois stickers inspirés par Snoop et les roues Flancs blancs SD. Il est disponible dans la boutique pendant toute la durée de la saison.</p>
-    
-    <h4>Un arsenal du passé</h4>
-    <p>La remise est ouverte ! Chaque semaine, des objets feront leur retour dans le butin disponible. Certains des objets réintroduits seront proposés uniquement la semaine de leur ajout. D'autres seront conservés plus d'une semaine, tandis que d'autres encore resteront présents pendant toute la saison. Voici quelques-uns des objets prévus :</p>
-    
-        <br>Pistolet double<br>
-            <img src="https://github.com/user-attachments/assets/5cf79dc3-a7ab-4fba-abcb-a73b2bc8ca8d" alt="Pistolet double">
-        <br>Fusil à pompe tactique<br>
-            <img src="https://github.com/user-attachments/assets/b4dc0d3c-20e4-448c-a1a6-3c2f648e8cc5" alt="Fusil à pompe tactique">
-        <br>Fusil à pompe spécialisé<br>
-            <img src="https://github.com/user-attachments/assets/4e325957-3665-49de-9f41-fc924a347f48" alt="Fusil à pompe spécialisé">
-        <br>Pistolet-mitrailleur à tir rapide<br>
-            <img src="https://github.com/user-attachments/assets/254f1608-10ce-49c7-b5ce-7968ac90e81f" alt="Pistolet-mitrailleur à tir rapide">
-        <br>Pistolet-mitrailleur à silencieux<br>
-            <img src="https://github.com/user-attachments/assets/2cd1a841-db9a-4888-b2b4-00a01e66145e" alt="Pistolet-mitrailleur à silencieux">
-        <br>Fusil d'assaut à silencieux<br>
-            <img src="https://github.com/user-attachments/assets/6026d122-09cc-4cf1-be6d-c77820612da6" alt="Fusil d'assaut à silencieux">
-        <br>Fusil de sniper lourd<br>
-            <img src="https://github.com/user-attachments/assets/30c35f72-ff86-4146-ab13-f43ad457609c" alt="Fusil de sniper lourd">
-        <br>Fusil de sniper semi-auto<br>
-            <img src="https://github.com/user-attachments/assets/44b3b76a-9288-418e-91ee-d0a437728449" alt="Fusil de sniper semi-auto">
-        <br>Fusil de chasse<br>
-            <img src="https://github.com/user-attachments/assets/84552cef-578a-4c4e-a076-a00a6c5c3335" alt="Fusil de chasse">
-        <br>Lance-roquettes<br>
-            <img src="https://github.com/user-attachments/assets/4bb63c12-0e9c-4bae-9dab-9ba5a53aebfa" alt="Lance-roquettes">
-       <br>Lance-grenades<br>
-            <img src="https://github.com/user-attachments/assets/745839e9-b711-4078-aaad-c860c5d1a23a" alt="Lance-grenades">
-        <br>Explosif télécommandé<br>
-            <img src="https://github.com/user-attachments/assets/8f4d6ad9-363b-4129-86b6-1e29ea5b5f0f" alt="Explosif télécommandé">
-        <br>Grenades<br>
-            <img src="https://github.com/user-attachments/assets/4cc1f84f-de3b-478e-b5af-49426fd4def3" alt="Grenades">
-        <br>Grenades collantes<br>
-            <img src="https://github.com/user-attachments/assets/b3d386e2-8867-4884-9ec2-6401e1e13dfa" alt="Grenades collantes">
-        <br>Bombe empoisonnée<br>
-            <img src="https://github.com/user-attachments/assets/0dacc5dd-9494-4a70-b957-80e33e346407" alt="Bombe empoisonnée">
-        <br>Poisson rouge mythique<br>
-            <img src="https://github.com/user-attachments/assets/a02ca55a-c809-43bc-a9a7-38d731d1ace0" alt="Poisson rouge mythique">
-        <br>Bazooka à bandage<br>
-            <img src="https://github.com/user-attachments/assets/1c34a99e-7bb3-4e45-a221-292dd9f5649d" alt="Bazooka à bandage">
-       <br>Bombe boogie-woogie. Elle joue désormais la chanson « Drop It Like It's Hot » de Snoop Dogg ! <br> </p>
-           <img src="https://github.com/user-attachments/assets/7057366e-d32f-4f1e-876a-3fe9113bbc5a">
-     <br> </br>
-    
-    <p>Restez à l'écoute des nouvelles mises à jour, alors que de nombreux autres éléments sont prévus tout au long de la saison.</p>
-</section>
-     <section id="deroulement">
-        <h2 class="section-title">Déroulement de la saison</h2>
-        <h3>Semaine 1 (à partir du 2 novembre) - Snoop Dogg et Doggpound </h3>
-<p>L'Agence a été renommée Doggpound et fait désormais office de quartier général pour l'entreprise de Snoop.Le maître des lieux vous remet le pistolet-mitrailleur à tambour de Snoop Dogg (de niveau mythique) si vous arrivez à le vaincre. Il se joint alors à vous en tant qu'allié !</p>
-   <p> Snoop est également l'icône de la saison 6 de Fortnite Festival ! Vous pouvez déverrouiller sa tenue Snoop Dogg LBC 1993 en obtenant le Passe Musique, mais vous pouvez aussi trouver la tenue Snoop Dogg dans la boutique.</p>
-    <h4><strong>Miaoudas sur le Yacht et TNTina à la Plateforme pétrolière</strong></h4>
-         <p>Miaoudas est toujours un matou mastoc, mais en plus mordoré. Rendez-lui visite sur le Yacht pour mettre la patte sur son fusil piou piou ! Quant à TNTina, elle prépare un sale coup à la Plateforme pétrolière. Essayez de l'éliminer pour obtenir son arc badaboum.</p>
-        <br> </br>
-         <h3>Semaine 2 (à partir du 7 novembre) - On l'appelle Slim Shady (dans la Grotte) </h3>
-<p>Abracadabra ! Il est de retour. Eminem a lancé un nouveau tour de magie pour ouvrir un restaurant, Mom's Spaghetti, dans la Grotte – un endroit bien connu des amateurs de lèche-vitrines.</p>
-   <p> Vous n'avez pas réservé avant de venir à Spaghetti Grotto ? Si vous parvenez à vaincre Eminem, il se joindra à vous et vous confiera son minigun de RG (de niveau mythique), une arme au flow impressionnant. </p>
-         <p>Difficile de ne pas se sentir inspiré en voyant Slim au combat. Alors procurez-vous la nouvelle tenue Rap Boy revisité à son arrivée dans la boutique en semaine 2 !</p>
-         <br> </br>
-         <h3> Semaine 3 (à partir du 14 novembre) - Ice Spice s'empare de l'Île du requin </h3>
-<p>Grah. Faites place à Ice Spice, la princesse du Bronx ! Celle-ci a mis la main sur l'Île du requin et l'a renommée Ice Isle, non sans en refaire la déco : c'est désormais un centre commercial de style Y2K baigné de néon, à l'ambiance menaçante.</p>
-   <p>  Battez Ice Spice pour l'ajouter à votre équipe et recevoir deux objets mythiques : le cramponneur d'Ice Spice et le fusil d'Ice Spice !</p>
-         <p>Difficile de ne pas se sentir inspiré en voyant Slim au combat. Alors procurez-vous la nouvelle tenue Rap Boy revisité à son arrivée dans la boutique en semaine 2 !</p>
-        <br> </br>
-         <h3> Semaine 4 (à partir du 21 novembre) - Une légende à jamais </h3>
-        <p> Non, ce n'est pas un rêve lucide. Admirez le coucher du soleil depuis le lieu notable WRLD's Point, qui sera ajouté en semaine 4. </p>
-           <h4> Remix : la conclusion (événement) </h4>
-             <p> Le Chapitre 2 : Remix s'achèvera sur une note spéciale. Assistez à l'événement Remix : la conclusion en direct le 30 novembre à 20h (CET) ! Afin de rendre hommage à Juice WRLD, qui était un joueur passionné de Fortnite, nous vous invitons à tous vous connecter entre le 30 novembre à 7h du matin (CET) et le 1er décembre à 7h du matin (CET) pour recevoir la tenue Juice WRLD implacable avec effet cel-shading. Nous annoncerons plus de détails sur l'hommage à Juice WRLD et l'événement Remix : la conclusion dans le courant du mois. </p>
-         
-    <section id="personnages">
-        <h2 class="section-title">Personnages</h2>
-        <div class="character">
-            <p>Une nouvelle saison de Fortnite signifie un nouveau Battle Pass de Fortnite, et avec cette saison Remix qui ne nous donne qu'un mois pour la terminer, nous nous retrouvons avec moins de skins uniques que d'habitude. Pourtant, ce sont des skins que vous allez vouloir, car certaines sont des versions remixées d'anciens skins du chapitre 2, et il semble qu'il y en aura d'autres en route vers la boutique d'objets tout au long de la saison.</p>
-            <video width="80%" controls>
-                <source src="https://github.com/user-attachments/assets/c040b403-f020-44e5-955d-064248807c02" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture de vidéos.
-            </video>
-            <p>Directrice du chaos : "Elle fait régner le chaos." niveaux 7 et 14</p>
-            <p>Elle est une variante du skin agent du chaos sorti dans le chapitre 2 de la saison 1. La principale différence entre les deux est que le directeur du chaos utilise plutôt un type de corps de femme que d'homme, ce qui donne au personnage des cheveux longs qui sortent de l'arrière de son masque et un design de costume légèrement différent. Son style alternatif opte pour un look blanc éclatant.</p>
-            <video width="80%" controls>
-                <source src="https://github.com/user-attachments/assets/4d5d3322-3cd8-4665-a844-cf8c0c682dbe" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture de vidéos.
-            </video>
-            <p>Onuple : "Le maître du fauchage" niveau 21</p>
-            <p>Alors que le 8-Ball(nom anglais) était une récompense dans le Battle Pass de la saison 1 du chapitre 2, nous avons désormais droit à un 1-Ball (nom anglais). Ce skin est basé sur une boule de billard, avec un casque comportant un grand numéro 1 et une combinaison jaune Bien que celui-ci n'ait pas de style alternatif dans le Battle Pass, il existe des fichiers décryptés d'un skin 10-Ball, qui pourrait bien être un skin bonus encore à révéler.</p>
-            <video width="80%" controls>
-                <source src="https://github.com/user-attachments/assets/3f01c581-ca0f-452a-a45e-3f205ed93f03" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture de vidéos.
-            </video>
-            <p>Skye incognito : "La nouvelle incarnation de Guff" niveaux 28 et 36</p>
-            <p>Skye faisait à l'origine partie du Battle Pass de la saison 2 du chapitre 2, mais elle se fait désormais passer pour une héroïne secrète, enfilant une perruque rose vive et portant un masque de ce qui était autrefois son chapeau - pas exactement le déguisement le plus incognito, mais il a l'air cool. Il existe également un style alternatif plus sombre qui utilise des couleurs noires et violettes.</p>
-            <video width="80%" controls>
-                <source src="https://github.com/user-attachments/assets/21f75947-b778-4eb5-a59a-10d33d4b4b3b" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture de vidéos.
-            </video>
-            <p>Miaoudas : "Un chat qui adore ce qui est doré" niveaux 43 et 50</p>
-            <p>Midas est probablement le plus reconnaissable des nouveaux skins. Il s'agit d'une compilation de deux des meilleurs skins de Fortnite, Midas et Meowscles, qui faisaient tous les deux partie du Battle Pass de la saison 2 du chapitre 2. Il s'agit d'une version plus améliorée de Midas qui a toujours sa tenue emblématique et ses mains dorées, sauf qu'il a maintenant un visage de chat grincheux au lieu d'un visage humain normal. C'est assez mignon, vraiment.</p>
-            <video width="80%" controls>
-                <source src="https://github.com/user-attachments/assets/149a0c96-38a4-462e-88b8-837ea6446d4d">
-                Votre navigateur ne prend pas en charge la lecture de vidéos.
-            </video> 
-             <p>Dynamo TNTina : "Allumer une allumette et allumer la mèche" personnage bonus</p>
-            <p>Le skin secret de cette saison, qui sera probablement débloqué en accomplissant des quêtes qui seront disponibles dans quelques semaines, est Dynamo TNTina. Elle aussi était présente dans le Battle Pass de la saison 2 du chapitre 2, à l'origine sous le nom de TNTina, mais elle a maintenant ajouté Dynamo à son nom et a un nouveau look, ainsi qu'un style alternatif de dessin animé.</p>
-        </div>
-    </section>
-    <section id="cartes">
-        <h2 class="section-title">Cartes</h2>
-        <div class="map">
-            <img src="https://github.com/user-attachments/assets/df45cbed-c61e-434c-a243-9425d23da486" alt="Carte de la saison" />
-            <p>Carte du battle royale de cette semaine</p>
-        </div>
-    </section>
-   <section id="quete">
-    <h2 class="section-title">Quête</h2> 
-    <div class="quest">
-    <h2 class="section-title">semaine 0</h2> 
-       <div class="quest">
-        <p class="p2">QUÊTE 1 : Gagnez des boucliers ou de la santé au Doggpound (125)</p>
-        <p>- étape1: Cherchez des objets de soin : potions de bouclier, mini-boucliers, poissons, ou autre.</p>
-        <p>- étape2: Allez à Doggpound (voir la carte de l'île) et appliquez le soin lorsque vous perdez de la vie ou du bouclier.</p>
-        <p>- aide: Les soins se trouvent dans les coffres normaux, les glacières, les grosses boîtes de munitions et les coffres bleus, et vous pouvez construire des structures, vous faire des dégâts de chutes et récupérer votre soin si cela permet de récupérer votre vie (le bouclier ne fonctionne pas comme dégâts de chute).</p>
-
-        <p class="p2">QUÊTE 2 : Frappez vos adversaires avec un pistolet à tambour (50)</p>
-        <p>- étape1: Cherchez et trouvez cette arme qui peut être dans tous les coffres ou en tuant le boss de Doggpound (voir carte de l'île).</p>
-        <p>- étape2: Vous devez faire des dégâts à des joueurs avec cette arme et uniquement cette arme. Attention, vous ne devez pas faire des dégâts mais toucher des personnes avec le nombre de balles nécessaires, ici 50 balles différentes.</p>
-        <p>- aide: Vous pouvez faire des dégâts à des joueurs en plein jeu ou attendre qu'ils soient à terre pour donner des coups de grâce avec l'arme du tambour.</p>
-
-        <p class="p2">QUÊTE 3 : Découvrir les lieux nommés (15)</p>
-        <p>- étape1: Aller à n'importe quel lieu pour faire avancer cette quête. Il faut 15 lieux différents.</p>
-        <p>- aide: Vous pouvez y aller à pied, en bateau, en voiture, ou en prenant des failles pour aller plus vite.</p>
-
-
-<p class="p2">QUÊTE 4 : Distance parcourue en sprint (250)</p>
-        <p>- étape1: Vous devez atterrir n'importe où sur l'île.</p>
-        <p>- étape2: Vous devez courir 250 mètres.</p>
-
-        <p class="p2">QUÊTE 5 : Récupérez les armes des joueurs éliminés (10)</p>
-        <p>- étape1: Vous devez atterrir n'importe où sur l'île.</p>
-        <p>- étape2: Prenez une arme, un accessoire ou votre pioche et faites des dégâts aux joueurs que vous rencontrez.</p>
-        <p>- étape3: Prenez les armes qu'ils vont lâcher lorsqu'ils vont mourir.</p>
-    </div>
-    <h2 class="section-title">semaine 1</h2> 
-       <div class="quest">
+        <h2 class="section-title">Nouveautés</h2>
         <img src="https://github.com/user-attachments/assets/ace424aa-5926-4bf7-9a95-670791ae6d9d">
-        <p>semaine 1 bientôt disponible !</p>
-    </div>
-</section>
-    <section id="images">
-        <h2 class="section-title">Images</h2>
-        <div class="carousel">
-            <p>Voici quelques images de la saison :</p>
-            <img src="https://github.com/user-attachments/assets/50d53b41-a406-46bb-a364-79531aec265f" alt="Image 1" />
-        </div>
+        <p>Nouveauté bientôt disponible !</p>
+
+    
+
+    <section id="arme">
+        <h2 class="section-title">Arme</h2>
+        <p>Le butin disponible dans Recharge a également été renouvelé. Voici la liste des armes que vous trouverez sur les deux cartes (de Recharge) :</p>
+ 
+	<p>Pistolet de combat</p>
+	<p>Pistolet à silencieux</p>
+	<p>Pistolet titanesque</p>
+	<p>Fusil à pompe automatique</p>
+	<p>Fusil à pompe spécialisé d'assaillant</p>
+	<p>Fusil à pompe spécialisé grondeur</p>
+	<p>Fusil à pompe automatique d'expert</p>
+	<p>Fusil à pompe de braconnier</p>
+	<p>Pistolet-mitrailleur Stinger</p>
+	<p>Pistolet-mitrailleur de combat</p>
+	<p>Pistolet-mitrailleur à chargeur double</p>
+	<p>Fusil d'assaut Hammer</p>
+	<p>Fusil d'assaut de traqueur</p>
+	<p>Fusil à tambour</p>
+	<p>Fusil d'assaut à silencieux ravageur</p>
+	<p>Fusil de sniper à silencieux</p>
+	<p>Carabine à levier</p>
+	<p>Lance-roquettes</p>
     </section>
+
+    <section id="deroulement">
+        <h2 class="section-title">Déroulement de la saison</h2>
+        <h3>Semaine 1 (à partir du 2 novembre) - Snoop Dogg et Doggpound</h3>
+        <p>L'Agence a été renommée Doggpound...</p>
+        <h4><strong>Miaoudas sur le Yacht et TNTina à la Plateforme pétrolière</strong></h4>
+        <p>Miaoudas est toujours un matou mastoc...</p>
+    </section>
+
+	<section id="solo">
+        <h2 class="section-title">Mode solo</h2>
+		<img src="https://github.com/user-attachments/assets/e1c5d6b3-a8de-4a83-8269-0f497c45296c">
+		<img src="https://github.com/user-attachments/assets/90618c6e-0f73-4f2c-8939-938f570b8e8d">
+		<p> Les règles du mode solo de Recharge sont les mêmes, la seule différence est que tous les joueurs bénéficient de trois vies en tout. Lorsque les réapparitions s'arrêtent, chaque vie en plus est convertie en 50 points de surbouclier supplémentaires non régénératifs (jusqu'à 100 pts au total). En mode Zéro construction, cela s'ajoute aux 50 pts de surbouclier régénératifs que tous les joueurs ont. Si vous êtes éliminé alors qu'il ne vous reste qu'une vie, vous retournez au salon ! </p>
 </body>
 </html>
