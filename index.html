@@ -18,6 +18,7 @@
             background-position: center;
             color: white;
             padding: 10px;
+            box-sizing: border-box;
         }
 
         /* Conteneur central pour les liens */
@@ -28,16 +29,28 @@
             border-radius: 10px;
             max-width: 600px;
             width: 100%;
-            box-sizing: border-box;
         }
 
-        /* Styles pour les liens */
-        .link-container a, .link-video a {
+        /* Styles pour les liens rouges */
+        .link-container a {
             display: block;
             margin: 8px auto;
             padding: 8px 16px;
             background-color: #4CAF50;
-            color: white;
+            color: red;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            width: fit-content;
+        }
+
+        /* Styles pour les liens bleus */
+        .link-video a {
+            display: block;
+            margin: 8px auto;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: blue;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1em;
